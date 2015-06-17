@@ -1,4 +1,13 @@
 import Ember from "ember";
+import ValidatableInput from 'ember-cli-html5-validation/mixins/validatable-input';
+
+ValidatableInput.reopen({
+  errorTemplates: {
+    valueMissing: {
+      defaultMessage: "Don't leave me blank!!!"
+    }
+  }
+});
 
 var NewHikeController = {
   actions: {
