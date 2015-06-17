@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'nwhiking',
     environment: environment,
+    firebase: 'https://popping-inferno-9162.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
