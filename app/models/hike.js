@@ -8,5 +8,7 @@ export default DS.Model.extend({
   rating: attr('number'),
   location: attr('string'),
   difficulty: attr('number'),
-  body: attr('string')
+  body: attr('string'),
+  comments: DS.hasMany('comment', {async: true})
+
 });
