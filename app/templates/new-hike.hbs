@@ -1,0 +1,36 @@
+<h1>New post</h1>
+
+<form>
+  <div class="form-group">
+    <label for="title">Name of the Hike</label>
+    {{input id="title" class="form-control" value=title}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Name of person posting the hike</label>
+    {{textarea id="author" class="form-control" value=author}}
+  </div>
+
+  <div class="form-group">
+    <label for="rating">How would you rate the hike?</label>
+    {{textarea id="rating" type='number' class="form-control" value=rating}}
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location of the hike</label>
+    {{textarea id="location" class="form-control" value=location}}
+  </div>
+
+  <div class="form-group">
+    <label for="difficulty">Difficulty of the hike</label>
+    {{textarea id="difficulty" type='number' class="form-control" value=difficulty}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Directions and other details</label>
+    {{textarea id="body" class="form-control" rows="15" value=body}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+
+</form>
