@@ -1,7 +1,15 @@
 body{
-  margin:10%;
+  margin-top:40px;
 }
 
 .muted{
   opacity:.5;
+}
+
+#about-info{
+  margin-top:40px;
+}
+
+#allhikestitle{
+  text-align: left;
 }

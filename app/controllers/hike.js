@@ -6,11 +6,15 @@ var HikeController = {
     edit: function() {
       this.set('isEditing', true);
     },
-
-    doneEditing: function() {
+    save: function() {
+      this.get('model').save();
       this.set('isEditing', false);
+    },
+    delete: function() {
+      this.get('model').destroyRecord();
+      this.transitionToRoute('hikes');
     }
   }
 };
 
-export default Ember.Controller.extend(HikeController);
+export default Ember.ObjectController.extend(HikeController);

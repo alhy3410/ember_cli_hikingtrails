@@ -1,12 +1,7 @@
-{{#if isEditing}}
-{{partial 'post/edit'}}
-<button {{action 'doneEditing'}}>Done</button>
-{{else}}
-<button {{action 'edit'}}>Edit</button>
-{{/if}}
+<h1>Hike Details</h1>
 
 <div class="hike-details">
-  <h1>{{model.title}}</h1>
+  <h2>{{model.title}}</h2>
   <h3 class='muted'>by {{model.author}}</h3>
 
 
@@ -18,3 +13,43 @@
   {{model.body}}
 
 </div>
+
+{{#if isEditing}}
+<form>
+  <div class="form-group">
+    <label for="title">Name of the Hike</label>
+    {{input id="title" class="form-control" value=title}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Name of person posting the hike</label>
+    {{textarea id="author" class="form-control" value=author}}
+  </div>
+
+  <div class="form-group">
+    <label for="rating">How would you rate the hike?</label>
+    {{textarea id="rating" type='number' class="form-control" value=rating}}
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location of the hike</label>
+    {{textarea id="location" class="form-control" value=location}}
+  </div>
+
+  <div class="form-group">
+    <label for="difficulty">Difficulty of the hike</label>
+    {{textarea id="difficulty" type='number' class="form-control" value=difficulty}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Directions and other details</label>
+    {{textarea id="body" class="form-control" rows="15" value=body}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+
+</form><button {{action 'doneEditing'}}>Done</button>
+{{else}}
+<button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+{{/if}}
