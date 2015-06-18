@@ -13,7 +13,7 @@ Router.map(function() {
     this.resource("comments");
   });
   this.resource("new-hike");
-  this.resource("sort-by-rank");
+  this.resource("sort-hikes");
   this.resource("comment", { path: 'comments/:comment_id'});
 });
 

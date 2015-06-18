@@ -4,7 +4,7 @@ var HikeSortController = {
   sortProperties: ['title:asc'],
   sortedHikes: Ember.computed.sort('model', 'sortProperties'),
   actions: {
-    sort: function() {
+    sortRating: function() {
       this.set('sortProperties', ['rating:desc']);
     }
   }
