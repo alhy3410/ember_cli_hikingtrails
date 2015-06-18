@@ -15,7 +15,7 @@
 <hr>
 <div id="map">
   <h2 id="title">Location</h2>
-  {{google-map latitude="34.851939" longitude="-82.399752"}}
+  {{google-map latitude=model.latitude longitude=model.longitude}}
 </div>
 <br>
 </div>
@@ -50,6 +50,16 @@
   <div class="form-group">
     <label for="body">Any other details</label>
     {{textarea id="body" class="form-control" rows="15" value=body}}
+  </div>
+
+  <div class="form-group">
+    <label for="latitude">Latitude</label>
+    {{textarea id="latitude" class="form-control" value=latitude}}
+  </div>
+
+  <div class="form-group">
+    <label for="longitude">Longitude</label>
+    {{textarea id="longitude" class="form-control" value=longitude}}
   </div>
 
   <button class="btn btn-primary" {{action 'save'}}>Save</button>

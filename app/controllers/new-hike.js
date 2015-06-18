@@ -9,7 +9,9 @@ var NewHikeController = {
         rating: this.get('rating'),
         location: this.get('location'),
         difficulty: this.get('difficulty'),
-        body: this.get('body')
+        body: this.get('body'),
+        latitude: this.get('latitude'),
+        longitude: this.get('longitude')
       });
       newHike.save();
       this.setProperties({
@@ -18,7 +20,9 @@ var NewHikeController = {
         rating: '',
         location: '',
         difficulty: '',
-        body: ''
+        body: '',
+        latitude: '',
+        longitude: ''
       });
       this.transitionToRoute('hikes');
     }

@@ -9,6 +9,10 @@ export default DS.Model.extend({
   location: attr('string'),
   difficulty: attr('number'),
   body: attr('string'),
+
+  latitude: attr('string'),
+  longitude: attr('string'),
+
   comments: DS.hasMany('comment', {async: true})
 
 });
