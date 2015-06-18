@@ -6,7 +6,7 @@
       {{#each hike in sortedHikes}}
       <li>
         {{#link-to 'hike' hike.id}}
-        {{hike.title}} = Rating: {{hike.rating}}, Location: {{hike.location}}, Difficulty: {{hike.difficulty}}
+        {{hike.title}} = Rating: {{hike.rating}}, Location: {{hike.location}}, Difficulty: {{hike.difficulty}}<br><br>
         {{/link-to}}
       </li>
       {{/each}}
