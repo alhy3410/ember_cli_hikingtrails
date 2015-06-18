@@ -1,0 +1,20 @@
+<h2>Comment on the hike:</h2>
+
+<form>
+  <div class="form-group">
+    <label for="author">Answered By:</label>
+    {{input id="author" class="form-control" value=author}}
+  </div>
+
+  <div class="form-group">
+    <label for="title">Short description of the hike:</label>
+    {{textarea id="title" class="form-control" value=title}}
+  </div>
+
+  <div class="form-group">
+    <label for="answer">Description about the hike:</label>
+    {{textarea id="answer" class="form-control" value=answer rows="10"}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Comment</button>
+</form>

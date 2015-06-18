@@ -12,6 +12,8 @@
   {{model.difficulty}}
   {{model.body}}
 
+
+
 </div>
 
 {{#if isEditing}}
@@ -53,3 +55,19 @@
 <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
+
+<hr>
+
+<div id="commentSection">
+  <h3>All Comments</h3>
+  {{#each comment in model.comments}}
+  <li>
+    {{#link-to 'comment' comment.id}}
+      {{comment.title}}<span class='muted'> by {{comment.author}}</span>
+    {{/link-to}}
+
+  </li>
+  {{/each}}
+  {{#link-to 'comments'}}Add a Comment{{/link-to}}
+  {{outlet}}
+</div>
