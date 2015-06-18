@@ -6,13 +6,16 @@
       {{#each hike in sortedHikes}}
       <li>
         {{#link-to 'hike' hike.id}}
-        {{hike.title}}<span class='muted'> : {{hike.rating}}</span>
+        {{hike.title}} = Rating: {{hike.rating}}, Location: {{hike.location}}, Difficulty: {{hike.difficulty}}
         {{/link-to}}
       </li>
       {{/each}}
     </ul>
   </div>
 
-  <button class="btn btn-primary" {{action 'sortRating'}}>Sort By Rank instead</button>
+  <button class="btn btn-primary" {{action 'sortRating'}}>Sort By Rank</button>
+  <button class="btn btn-primary" {{action 'sortLocation'}}>Sort By Location</button>
+  <button class="btn btn-primary" {{action 'sortDifficulty'}}>Sort By Difficulty</button>
+  <button class="btn btn-primary" {{action 'sortTitle'}}>Sort By Title </button>
 
 </div>
