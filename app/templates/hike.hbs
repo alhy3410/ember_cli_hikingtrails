@@ -1,19 +1,18 @@
 <h1>Hike Details</h1>
 
 <div class="hike-details">
-  <h2>{{model.title}}</h2>
-  <h3 class='muted'>by {{model.author}}</h3>
 
-
-
+  <h2>Name of the Hike: {{model.title}}</h2>
+  <h3 class='muted'>Submitted by: {{model.author}}</h3>
   <hr>
-  {{model.rating}}
-  {{model.location}}
-  {{model.difficulty}}
-  {{model.body}}
+  <p>
+    This hike was rated out of 5 as a: {{model.rating}}<br>
+    Location: {{model.location}}<br>
+    Level of difficulty from 1 to 10: {{model.difficulty}} <br>
+    More information about the hike:  {{model.body}}
+  </p>
 
-
-
+<hr>
 </div>
 
 {{#if isEditing}}
@@ -29,22 +28,22 @@
   </div>
 
   <div class="form-group">
-    <label for="rating">How would you rate the hike?</label>
-    {{textarea id="rating" type='number' class="form-control" value=rating}}
+    <label for="rating">How would you rate the hike from 1 to 5:</label>
+    {{textarea id="rating" type='number' class="form-control" min="1" max="5" value=rating}}
   </div>
 
   <div class="form-group">
-    <label for="location">Location of the hike</label>
+    <label for="location">Location of the hike:</label>
     {{textarea id="location" class="form-control" value=location}}
   </div>
 
   <div class="form-group">
-    <label for="difficulty">Difficulty of the hike</label>
-    {{textarea id="difficulty" type='number' class="form-control" value=difficulty}}
+    <label for="difficulty">Difficulty of the hike from 1 to 10:</label>
+    {{textarea id="difficulty" type='number' class="form-control" min="1" max="10" value=difficulty}}
   </div>
 
   <div class="form-group">
-    <label for="body">Directions and other details</label>
+    <label for="body">Any other details</label>
     {{textarea id="body" class="form-control" rows="15" value=body}}
   </div>
 
@@ -53,7 +52,7 @@
 </form><button {{action 'doneEditing'}}>Done</button>
 {{else}}
 <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
-<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+<button class="btn btn-primary" {{action 'delete'}}>Delete</button>
 {{/if}}
 
 <hr>
@@ -68,6 +67,6 @@
 
   </li>
   {{/each}}
-  {{#link-to 'comments'}}Add a Comment{{/link-to}}
+  {{#link-to 'comments' classNames="btn btn-primary"}}Add a Comment{{/link-to}}
   {{outlet}}
 </div>

@@ -1,5 +1,16 @@
 body{
-  margin-top:40px;
+  background-color:black;
+  background-image: url('../images/mtbackground.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:white;
+  font-family: 'Noto Serif', serif;
+  }
+
+#indexText{
+  margin-top:5%;
+  text-shadow: 1px 1px #000000;
+
 }
 
 .muted{
@@ -7,7 +18,8 @@ body{
 }
 
 #about-info{
-  margin-top:40px;
+  margin-top:5%;
+  text-shadow: 1px 1px #000000;
 }
 
 #allhikestitle{
@@ -16,4 +28,28 @@ body{
 
 #individualComment{
   margin-top:40px;
+}
+
+.navbar{
+  opacity:.5;
+}
+
+.navbar-brand{
+  font-weight:bold;
+  color:black;
+}
+
+.nav navbar-nav{
+  font-weight:bold;
+  color:black;
+}
+
+#allHikesInfo{
+  margin:5% 25% 0 10%;
+
+}
+
+a{
+  color:white;
+  text-decoration: underline;
 }

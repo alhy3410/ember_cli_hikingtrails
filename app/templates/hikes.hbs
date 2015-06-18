@@ -1,19 +1,21 @@
-<h1 id='allhikestitle'>List of All Hikes</h1>
+<div id="allHikesInfo">
+  <h1 id='allhikestitle'>List of All Hikes</h1>
 
-<div class="col-md-4">
-  <ul class="list-unstyled">
-    {{#each hike in model}}
-    <li>
-      {{#link-to 'hike' hike.id}}
+  <div class="col-md-4">
+    <ul class="list-unstyled">
+      {{#each hike in model}}
+      <li>
+        {{#link-to 'hike' hike.id}}
         {{hike.title}}<span class='muted'> by {{hike.author}}</span>
-      {{/link-to}}
-    </li>
-    {{/each}}
-  </ul>
-  <p>{{#link-to 'new-hike' classNames="btn btn-primary"}}Add a new hike{{/link-to}}</p>
+        {{/link-to}}
+      </li>
+      {{/each}}
+    </ul>
+    <p>{{#link-to 'new-hike' classNames="btn btn-primary"}}Add a new hike{{/link-to}}</p>
 
-</div>
+  </div>
 
-<div class="col-md-8">
-  {{outlet}}
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
 </div>

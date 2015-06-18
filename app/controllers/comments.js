@@ -14,13 +14,13 @@ var CommentsController = {
       newAnswer.save().then(function(){
         hike.get('comments').pushObject(newAnswer);
         hike.save();
-      })
+      });
 
       this.setProperties({
         author: "",
-        author: "",
-        author: ""
-      })
+        title: "",
+        answer: ""
+      });
       this.transitionToRoute('hike', hike.id);
     }
   }

@@ -13,7 +13,7 @@ Router.map(function() {
     this.resource("comments");
   });
   this.resource("new-hike");
-  this.resource("comment", { path: 'comments/:comment_id'})
+  this.resource("comment", { path: 'comments/:comment_id'});
 });
 
 export default Router;
