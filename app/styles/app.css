@@ -53,3 +53,8 @@ a{
   color:white;
   text-decoration: underline;
 }
+
+.map-canvas {
+  height: 500px;
+  width: 500px;
+}
