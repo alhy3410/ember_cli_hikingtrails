@@ -1,0 +1,18 @@
+<div id="allHikesInfo">
+  <h1 id='allhikestitle'>List of All Hikes - Sorted by Name</h1>
+
+  <div class="col-md-12">
+    <ul class="list-unstyled">
+      {{#each hike in sortedHikes}}
+      <li>
+        {{#link-to 'hike' hike.id}}
+        {{hike.title}}<span class='muted'> : {{hike.rating}}</span>
+        {{/link-to}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <button class="btn btn-primary" {{action 'sort'}}>Sort By Rank instead</button>
+
+</div>
